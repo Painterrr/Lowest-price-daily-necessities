@@ -16,15 +16,21 @@ public class Mart extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "mart_id")
+    @Column(name = "id")
     private Long id;
 
+    /*
+    판매업소명
+     */
     private String name;
 
+    /*
+    소속 브랜드
+     */
     private String brand;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "area_id")
-    private Area area;
+    private Area areaId;
 
 }

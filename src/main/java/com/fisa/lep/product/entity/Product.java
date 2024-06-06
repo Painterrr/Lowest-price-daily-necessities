@@ -18,15 +18,21 @@ public class Product extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "product_id")
+    @Column(name = "id")
     private Long id;
 
+    /*
+    상품 이름
+     */
     private String name;
 
+    /*
+    상품 가격
+     */
     private BigDecimal price;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "mart_id")
-    private Mart mart;
+    private Mart martId;
 
 }

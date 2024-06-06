@@ -17,17 +17,20 @@ public class Cart extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "cart_id")
+    @Column(name = "id")
     private Long id;
 
+    /*
+    지역 전체 이름: 서울특별시 송파구 가락1동
+     */
     private String fullAddr;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
-    private Member member;
+    private Member memberId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "area_id")
-    private Area area;
+    private Area areaId;
 
 }
