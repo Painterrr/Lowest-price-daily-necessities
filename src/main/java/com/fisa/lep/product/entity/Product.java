@@ -3,9 +3,7 @@ package com.fisa.lep.product.entity;
 import com.fisa.lep.common.BaseEntity;
 import com.fisa.lep.mart.entity.Mart;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -14,7 +12,7 @@ import java.math.BigDecimal;
 @Getter
 @Table(name = "product")
 @Entity
-public class Product extends BaseEntity {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +22,7 @@ public class Product extends BaseEntity {
     /*
     상품 이름
      */
-    private String name;
+    private String prodName;
 
     /*
     상품 가격

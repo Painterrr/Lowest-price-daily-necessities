@@ -4,16 +4,14 @@ import com.fisa.lep.area.entity.Area;
 import com.fisa.lep.common.BaseEntity;
 import com.fisa.lep.member.entity.Member;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Getter
 @Table(name = "cart")
 @Entity
-public class Cart extends BaseEntity {
+public class Cart {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

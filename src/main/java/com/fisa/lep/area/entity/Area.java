@@ -2,16 +2,14 @@ package com.fisa.lep.area.entity;
 
 import com.fisa.lep.common.BaseEntity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Getter
 @Table(name = "area")
 @Entity
-public class Area extends BaseEntity {
+public class Area {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

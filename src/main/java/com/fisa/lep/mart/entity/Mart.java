@@ -3,16 +3,14 @@ package com.fisa.lep.mart.entity;
 import com.fisa.lep.area.entity.Area;
 import com.fisa.lep.common.BaseEntity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Getter
 @Table(name = "mart")
 @Entity
-public class Mart extends BaseEntity {
+public class Mart {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +20,7 @@ public class Mart extends BaseEntity {
     /*
     판매업소명
      */
-    private String name;
+    private String martName;
 
     /*
     소속 브랜드
