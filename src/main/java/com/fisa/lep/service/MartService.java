@@ -35,11 +35,7 @@ public class MartService {
             String[] headers = reader.readNext();
             String[] record;
 
-            int cnt = 0;
             while ((record = reader.readNext()) != null) {
-                cnt++;
-                if (cnt >= 1000)
-                    break;
                 processRecord(record);
             }
         } catch (IOException | CsvException e) {
@@ -57,10 +53,10 @@ public class MartService {
      */
     private void processRecord(String[] record) {
         String martName = record[3];
-        Optional<Mart> martOptional = martRepository.findByMartName(martName);
+        String brand = record[4];
+        Optional<Mart> martOptional = martRepository.findByMartNameAndBrand(martName, brand);
 
         if (martOptional.isEmpty()) {
-            String brand = record[4];
 
             // 도로명 주소를 가져오기
             String fullAddr = kakaoAPIService.getFullAddressFromKakaoApi(martName);

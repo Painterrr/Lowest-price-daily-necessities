@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface MartRepository extends JpaRepository<Mart, Long> {
-    Optional<Mart> findByMartName(String martName);
+    Optional<Mart> findByMartNameAndBrand(String martName, String brand);
 }
