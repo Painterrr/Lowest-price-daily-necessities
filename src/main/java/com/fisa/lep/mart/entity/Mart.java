@@ -8,6 +8,7 @@ import lombok.*;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Getter
+@Setter
 @Table(name = "mart")
 @Entity
 public class Mart {

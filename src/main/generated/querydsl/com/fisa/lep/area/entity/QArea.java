@@ -21,6 +21,8 @@ public class QArea extends EntityPathBase<Area> {
 
     public final StringPath fullAddr = createString("fullAddr");
 
+    public final StringPath hCode = createString("hCode");
+
     public final NumberPath<Long> id = createNumber("id", Long.class);
 
     public QArea(String variable) {

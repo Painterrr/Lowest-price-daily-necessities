@@ -30,7 +30,7 @@ public class Service {
      * @return lowest
      */
     public String read(String area, String product) {
-        String lowest = String.valueOf(rc.read(area, product));
+        String lowest = String.valueOf(rc.read(area, product).orElse("해당 조건에 부합하는 상품을 찾을 수 없음."));
 
         log.info("** in service, lowest: {}", lowest);
 
